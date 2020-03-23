@@ -14,13 +14,13 @@ class CreateProductStorePricesTable extends Migration
     public function up()
     {
         Schema::create('product_store_prices', function (Blueprint $table) {
-            $table->foreignId('product_id');
+            $table->foreignId('variant_id');
             $table->foreignId('branch_id');
             $table->double('price', 8, 2);
             $table->foreignId('created_by')->nullable();
             $table->timestamps();
 
-            $table->foreign('product_id')->references('id')->on('products');
+            $table->foreign('variant_id')->references('id')->on('product_variants');
             $table->foreign('branch_id')->references('id')->on('store_branches');
             $table->foreign('created_by')->references('id')->on('users');
         });
