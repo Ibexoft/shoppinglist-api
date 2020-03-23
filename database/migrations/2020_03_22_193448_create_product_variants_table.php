@@ -32,6 +32,7 @@ class CreateProductVariantsTable extends Migration
      */
     public function down()
     {
+        Schema::disableForeignKeyConstraints();
         Schema::dropIfExists('product_variants');
     }
 }

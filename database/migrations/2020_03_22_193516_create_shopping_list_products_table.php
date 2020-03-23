@@ -25,7 +25,7 @@ class CreateShoppingListProductsTable extends Migration
 
             $table->foreign('shopping_list_id')->references('id')->on('shopping_lists');
             $table->foreign('variant_id')->references('id')->on('product_variants');
-            $table->foreign('branch_id')->references('id')->on('store_branches');
+            // $table->foreign('branch_id')->references('id')->on('store_branches');
         });
     }
 
