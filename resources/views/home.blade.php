@@ -1,27 +1,22 @@
 @extends('layouts.app')
 
 @section('content-header')
+<div class="header-body">
+    <div class="row align-items-center py-4">
+        <div class="col-xl-8 center">
+            <h6 class="h2 text-white d-inline-block mb-0">List Name</h6>
+        </div>
+        <div class="col-lg-6 col-5 text-right">
+            <!-- <a href="#" class="btn btn-sm btn-neutral">New</a>
+            <a href="#" class="btn btn-sm btn-neutral">Filters</a> -->
+        </div>
+    </div>
+</div>
 @endsection
 
 @section('content-body')
 <div class="row">
-    <div class="col-xl-8 center">
-        <!-- <div class="card bg-secondary">
-            <div class="card-body">
-                <form class="" id="add-item">
-                    <div class="mb-0">
-                        <div class="input-group input-group-flush">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text"><i class="fas fa-plus"></i></span>
-                            </div>
-                            <input class="form-control" placeholder="Add item" type="text">
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </div> -->
-
-        
+    <div class="col-xl-8 center">        
         <div class="card">
             <!-- Card header -->
             <div class="card-header border-0">
