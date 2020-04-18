@@ -5,7 +5,7 @@
 <nav class="sidenav navbar navbar-vertical  fixed-left  navbar-expand-xs navbar-light bg-white" id="sidenav-main">
     <div class="scrollbar-inner">
         <!-- Brand -->
-        <div class="sidenav-header align-items-center mt-3">
+        <div class="side-nav-header align-items-center mt-3">
             <a href="javascript:void(0)">
                 <img src="{{ asset('argon/assets/img/brand/icon.svg') }}" class="wide-img" alt="...">
             </a>
