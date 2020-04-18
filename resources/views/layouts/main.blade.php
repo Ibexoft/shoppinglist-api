@@ -5,7 +5,7 @@
 <nav id="navbar-main" class="navbar navbar-horizontal navbar-transparent navbar-main navbar-expand-lg navbar-light">
     <div class="container">
         <a class="navbar-brand" href="dashboard.html">
-            <h1 class="heading-title text-lighter">Shopist</h1>
+            <h1 class="heading-title text-lighter">{{config('app.name')}}</h1>
             <!-- <img src="{{ asset('argon/assets/img/brand/white.png') }}"> -->
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -17,7 +17,7 @@
                     <div class="col-6 collapse-brand">
                         <a href="dashboard.html">
                             <img src="{{ asset('argon/assets/img/brand/icon.svg') }}" class="img-thumbnail">
-                            <span>Shopist</span>
+                            <span>{{config('app.name')}}</span>
                         </a>
                     </div>
                     <div class="col-6 collapse-close">
@@ -28,7 +28,6 @@
                     </div>
                 </div>
             </div>
-            <hr class="d-lg-none" />
             <ul class="navbar-nav align-items-lg-center ml-lg-auto">
             <li class="nav-item">
                 <a class="nav-link nav-link-icon" href="https://www.facebook.com/creativetim" target="_blank" data-toggle="tooltip" data-original-title="Like us on Facebook">
