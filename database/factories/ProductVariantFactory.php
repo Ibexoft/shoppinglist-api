@@ -7,7 +7,8 @@ use Faker\Generator as Faker;
 
 $factory->define(ProductVariant::class, function (Faker $faker) {
     return [
-        'unit' => randomElement(['kg', 'l', 'pc', 'size']),
-        'quantity' => $faker->randomDigit
+        'unit' => $faker->randomElement(['kg', 'l', 'pc', 'size']),
+        'quantity' => $faker->randomDigit,
+        'mrp' => $faker->randomNumber(2),
     ];
 });

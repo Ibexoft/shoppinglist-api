@@ -9,6 +9,6 @@ $factory->define(StoreBranch::class, function (Faker $faker) {
     return [
         'name' => $faker->streetName,
         'address' => $faker->streetAddress,
-        'map_location' => $faker->latitude + ',' + $faker->longitude,
+        'map_location' => $faker->latitude . ',' . $faker->longitude,
     ];
 });

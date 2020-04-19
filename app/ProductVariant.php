@@ -17,7 +17,7 @@ class ProductVariant extends Model
 
     public function meta()
     {
-        return $this->hasMany('App\ProductVariantMeta');
+        return $this->hasMany('App\ProductVariantMeta', 'variant_id');
     }
 
     public function product()
@@ -27,7 +27,7 @@ class ProductVariant extends Model
 
     public function store_prices()
     {
-        return $this->belongsToMany('App\StoreBranch', 'store_branches', 'variant_id', 'branch_id')
+        return $this->belongsToMany('App\StoreBranch', 'product_store_prices', 'variant_id', 'branch_id')
             ->withPivot('price', 'created_by')
             ->withTimestamps();
     }

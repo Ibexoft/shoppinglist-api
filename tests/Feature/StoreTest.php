@@ -55,4 +55,20 @@ class StoreTest extends TestCase
             'created_by' => $user->id,
         ]);
     }
+
+    /**
+     * A basic feature test example.
+     *
+     * @return void
+     */
+    public function testStoreBranch()
+    {
+        $user = factory(\App\User::class)->create();
+        $store = factory(\App\Store::class)->create(['created_by' => $user->id]);
+        $store->branches()->save(factory(\App\StoreBranch::class)->make(['created_by' => $user->id]));
+
+        $this->assertDatabaseHas('store_branches', [
+            'store_id' => $store->id,
+        ]);
+    }
 }

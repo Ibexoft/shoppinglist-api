@@ -7,6 +7,7 @@ use Faker\Generator as Faker;
 
 $factory->define(ProductVariantMeta::class, function (Faker $faker) {
     return [
-        //
+        'key' => $faker->randomElement(['color', 'size']),
+        'value' => $faker->randomElement(['red', 'blue', 'large'])
     ];
 });
