@@ -186,9 +186,8 @@ class ProductTest extends TestCase
         $store->branches()->save(factory(\App\StoreBranch::class)->make(['created_by' => $user->id]));
         $branch = $store->branches()->first();
 
-        $price = 102.50;
-
         // set product price in branch
+        $price = 102.50;
         $variant->store_prices()->save($branch, [
                 'variant_id' => $variant->id,
                 // 'branch_id' => $branch->id,
